@@ -14,9 +14,9 @@ public class Produto {
         this.preco = newPreco;
     }
     public void setnomeProduto(String alteraProduto){
-        this.nomeProduto = alteraProduto
+        this.nomeProduto = alteraProduto;
     }
     public String toString(){
-        return this.nomeProduto + "que tem o preço: " + this.preco
+        return this.nomeProduto + "que tem o preço: " + this.preco;
     }
 }
