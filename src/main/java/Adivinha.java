@@ -41,4 +41,3 @@ public class Adivinha {
         leitor.close();
     }
 }
-git status

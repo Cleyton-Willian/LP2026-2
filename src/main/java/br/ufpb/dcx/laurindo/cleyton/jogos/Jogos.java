@@ -36,9 +36,11 @@ public class Jogos {
 
     public void setnumGolsTime2(int setnumGolsTime2) {
         this.numGolsTime2 = setnumGolsTime2;
+    }
 
     public String toString() {
-        return this.nomeTime1() + "que fez" + this.numGolsTime1() + "gols\n" + "Já o time" + this.nomeTime2() + "fez" + this.numGolsTime2() + "gols";
+        return this.nomeTime1 + "que fez" + this.numGolsTime1 + "gols\n"
+                + "Já o time" + this.nomeTime2 + "fez" + this.numGolsTime2 + "gols";
     }
 
 }
