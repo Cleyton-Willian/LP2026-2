@@ -18,6 +18,5 @@ public class Main {
         }
         leitor.close();
         System.out.println("O menor número é: " + menor);
-        System.out.println("Fim");
     }
 }
