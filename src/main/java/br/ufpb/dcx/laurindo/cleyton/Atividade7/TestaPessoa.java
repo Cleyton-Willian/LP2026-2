@@ -22,6 +22,7 @@ public class TestaPessoa {
                 System.out.println(p.nome + " é de menor!");
             }
         }
+        System.out.println("fim do programa");
     }
 
 }
