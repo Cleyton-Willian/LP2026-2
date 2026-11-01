@@ -1,4 +1,4 @@
-package br.ufpb.dcx.laurindo.cleyton;
+package br.ufpb.dcx.laurindo.cleyton.jogos;
 
 public class Produto {
     public double preco;
