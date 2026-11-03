@@ -1,4 +1,4 @@
-package br.ufpb.dcx.laurindo.cleyton.Atividade5;
+package br.ufpb.dcx.laurindo.cleyton.atividade5;
 
 public class AtendimentoMedico {
 

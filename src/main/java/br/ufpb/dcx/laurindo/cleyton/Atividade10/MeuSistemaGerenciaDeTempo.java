@@ -21,5 +21,12 @@ public class MeuSistemaGerenciaDeTempo {
         }
         return tarefasPesq;
     }
+
+    public void cadastrarTarefas(String descricao, String categoria, int tarefaEmMinutos){
+        Tarefa novoObjeto = new Tarefa();
+
+
+    }
+
     //TODO!
 }
