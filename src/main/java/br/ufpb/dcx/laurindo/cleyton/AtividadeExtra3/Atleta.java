@@ -16,7 +16,8 @@ public class Atleta {
     public String getCodigo(){
         return this.codigo;
     }
-    public String getIdade(){
+
+    public int getIdade(){
         return this.idade;
     }
     public List<Telefone> getTelefones() {

@@ -2,10 +2,10 @@ package br.ufpb.dcx.laurindo.cleyton.Atividade10;
 import java.util.List;
 
 public interface SistemaGerenciaDeTempo {
-    public void cadastrarTarefa(String descricao, String categoria, int tempoEmMinutos);
-    public List<Tarefa> pesquisarTarefasDaCategoria(String categoria);
-    public List<Tarefa> pesquisarTarefasQueDuraramMaisDe(int tempoEmMinutos);
-    public int calcularTempoTotalDeTarefasDaCategoria(String categoriaTarefa);
-    public int calcularTempoTotalDeTarefasComDescricao(String descricaoTarefa);
-    public List<Tarefa> pesquisarTarefasPorDescricao(String descricao);
+    void cadastrarTarefa(String descricao, String categoria, int tempoEmMinutos);
+    List<Tarefa> pesquisarTarefasDaCategoria(String categoria);
+    List<Tarefa> pesquisarTarefasQueDuraramMaisDe(int tempoEmMinutos);
+    int calcularTempoTotalDeTarefasDaCategoria(String categoriaTarefa);
+    int calcularTempoTotalDeTarefasComDescricao(String descricaoTarefa);
+    List<Tarefa> pesquisarTarefasPorDescricao(String descricao);
 }

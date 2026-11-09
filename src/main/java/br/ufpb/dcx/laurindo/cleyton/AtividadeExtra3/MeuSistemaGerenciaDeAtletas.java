@@ -2,24 +2,42 @@ package br.ufpb.dcx.laurindo.cleyton.AtividadeExtra3;
 
 import java.util.ArrayList;
 import java.util.List;
-public class MeuSistemaGerenciaDeAtletas implements SistemaGerenciaDeAtletas{
+
+public class MeuSistemaGerenciaDeAtletas implements SistemaGerenciaDeAtletas {
+
     private List<Atleta> atletas;
-    public MeuSistemaGerenciaDeAtletas(){
+
+    public MeuSistemaGerenciaDeAtletas() {
         this.atletas = new ArrayList<>();
     }
-    public boolean cadastrarTelefoneDeAtleta(String codigoAtleta, Telefone tel) {
+
+    @Override
+    public boolean cadastrarAtleta(String codigo, int idade, List<Telefone> telefones) {
+        Atleta novoAtleta = new Atleta(codigo, idade, telefones);
+        for(int k=0;k<atletas.size();k++){
+            if(atletas.get(k).getCodigo().equals(codigo)){
+                return false;
+            }
+        }
+        atletas.add(novoAtleta);
+        return true;
+    }
+
+    @Override
+    public boolean cadastrarTelefoneDeAtleta(String codigo, Telefone tel) {
         for (Atleta a : this.atletas) {
-            if (a.getCodigo().equals(codigoAtleta)) {
-                a.cadastraTelefone(tel);
+            if (a.getCodigo().equals(codigo)) {
+                a.cadastraTelefone(tel); // Supondo que o método na classe Atleta seja este
                 return true;
             }
         }
         return false;
     }
 
-    public List<Atleta> pesquisarAtletasComIdadeEntre(int idadeInferior, int idadeSuperior){
+    @Override
+    public List<Atleta> pesquisarAtletasComIdadeEntre(int idadeInferior, int idadeSuperior) {
         List<Atleta> listaAtletasPorIdade = new ArrayList<>();
-        for(Atleta a: this.atletas){
+        for (Atleta a : this.atletas) {
             if (a.getIdade() >= idadeInferior && a.getIdade() <= idadeSuperior) {
                 listaAtletasPorIdade.add(a);
             }
@@ -27,18 +45,24 @@ public class MeuSistemaGerenciaDeAtletas implements SistemaGerenciaDeAtletas{
         return listaAtletasPorIdade;
     }
 
-    public int pesquisaMaiorIdadeDosAtletas(){
-        return 0;
-        //TODO!
+    @Override
+    public int pesquisarMaiorIdadeDosAtletas() {
+        int maiorIdade = 0;
+        for (Atleta a : this.atletas) {
+            if (a.getIdade() > maiorIdade) {
+                maiorIdade = a.getIdade();
+            }
+        }
+        return maiorIdade;
     }
 
-    public boolean apagarTelefoneDosAtletas(){
+    @Override
+    public boolean apagarTelefoneDeAtleta(String codigo, Telefone telefone) {
+        for (Atleta a : this.atletas) {
+            if (a.getCodigo().equals(codigo)) {
+                return a.getTelefones().remove(telefone);
+            }
+        }
         return false;
-        //TODO!
     }
-
-    public void Atleta(String codigo, int idade, List<Telefone> telefones) {
-        //TODO!
-    }
-
-    }//… Outros métodos da classe
+}

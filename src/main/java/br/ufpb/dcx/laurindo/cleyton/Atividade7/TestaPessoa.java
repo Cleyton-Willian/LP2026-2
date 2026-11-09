@@ -2,6 +2,8 @@ package br.ufpb.dcx.laurindo.cleyton.Atividade7;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import java.util.ArrayList;
+
 public class TestaPessoa {
     public static void main(String[] args){
         ArrayList<Pessoa> pessoas = new ArrayList<>();

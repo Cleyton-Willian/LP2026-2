@@ -20,15 +20,15 @@ public class Tarefa {
         return this.categoria;
     }
 
-    public String getTempoTarefaEmMinutos() {
-        return this.tempoTarefaEmMinutos + "minutos";
+    public int getTempoTarefaEmMinutos() {
+        return this.tempoTarefaEmMinutos;
     }
 
     public void setTempoTarefaEmMinutos(int tempoTarefaEmMinutos) {
         this.tempoTarefaEmMinutos = tempoTarefaEmMinutos;
     }
 
-    public void  setDescricao(String descricao) {
+    public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
 
@@ -38,5 +38,10 @@ public class Tarefa {
 
     public String toString() {
         return "Tarefa " + this.descricao + " com duração de " + this.tempoTarefaEmMinutos;
+    }
+
+    public Object getDescricaoTarefa() {
+        //TODO!
+        return null;
     }
 }

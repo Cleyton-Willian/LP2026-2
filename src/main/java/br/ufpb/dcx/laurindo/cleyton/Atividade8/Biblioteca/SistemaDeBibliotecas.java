@@ -19,12 +19,12 @@ public class SistemaDeBibliotecas implements SistemaBiblioteca {
     public Livro pesquisarLivro(String titulo){
         for(Livro livro: this.livros){
             if(livro.getTitulo().equalsIgnoreCase(titulo)){
-                System.out.println("Livro encontrado com sucesso!")
+                System.out.println("Livro encontrado com sucesso!");
                 return livro;
             }
         }
         System.out.println("Livro não encontrado.");
-        return null
+        return null;
     }
 
     @Override
