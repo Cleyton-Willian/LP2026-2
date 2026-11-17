@@ -1,3 +1,5 @@
+package br.ufpb.dcx.laurindo.cleyton.AtividadesDeAprendizadoBasico;
+
 public class Fibonacci {
     public static void main(String [] args){
         int somaAnterior = 0;

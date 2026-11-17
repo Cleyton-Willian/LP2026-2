@@ -1,3 +1,5 @@
+package br.ufpb.dcx.laurindo.cleyton.AtividadesDeAprendizadoBasico;
+
 import java.util.Scanner;
 
 public class Adivinha {

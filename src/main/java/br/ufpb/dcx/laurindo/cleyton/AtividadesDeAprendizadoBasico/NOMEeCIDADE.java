@@ -1,3 +1,5 @@
+package br.ufpb.dcx.laurindo.cleyton.AtividadesDeAprendizadoBasico;
+
 import javax.swing.JOptionPane;
 public class NOMEeCIDADE {
     public static void main(String[] args) {
