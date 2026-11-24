@@ -12,13 +12,13 @@ public class MeuSistemaGerenciaDeAtletas implements SistemaGerenciaDeAtletas {
     }
 
     @Override
-    public boolean cadastrarAtleta(String codigo, int idade, List<Telefone> telefones) {
-        Atleta novoAtleta = new Atleta(codigo, idade, telefones);
-        for(int k=0;k<atletas.size();k++){
-            if(atletas.get(k).getCodigo().equals(codigo)){
-                return false;
+    public boolean cadastrarAtleta(String codigo, int idade, List<Telefone> telefones) throws AtletaJaExisteException {
+        for (int k = 0; k < atletas.size(); k++) {
+            if (atletas.get(k).getCodigo().equals(codigo)) {
+                throw new AtletaJaExisteException("O atleta já foi cadastrado");
             }
         }
+        Atleta novoAtleta = new Atleta(codigo, idade, telefones);
         atletas.add(novoAtleta);
         return true;
     }
